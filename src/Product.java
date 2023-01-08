@@ -11,6 +11,17 @@ public class Product {
         this.productName = productName;
         this.price = price;
         this.amount = amount;
+
+    }
+
+    public Product(String productName) {
+        this.productName = productName;
+    }
+
+    public static void checkPriceAndAmount(Product product) {
+        if (product.price == 0 && product.amount == 0) {
+            System.out.println("Заполните все поля!");
+        }
     }
 
     public String getProductName() {
