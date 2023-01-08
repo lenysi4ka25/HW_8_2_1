@@ -4,6 +4,8 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("Первая домашка восьмого урока второго курса - готова)");
+
         Product banan = new Product("Бананы");
         Product apple = new Product("Яблоки");
         Product cucumber = new Product("Огрурцы");
