@@ -4,6 +4,22 @@ public class Main {
         static Set<Product> product = new HashSet<>();
         public static void main(String[] args) {
 
+            List<Integer> numbers = new ArrayList<>(20);
+            Random random = new Random();
+            while (numbers.size() < 20) {
+                numbers.add(random.nextInt(30));
+            }
+            System.out.println(numbers);
+            Iterator<Integer> numberIterator = numbers.iterator();
+            while (numberIterator.hasNext()) {
+                int number = numberIterator.next();{
+                    if (number % 2 != 0) {
+                        numberIterator.remove();
+                    }
+                }
+                System.out.println(numbers);
+            }
+
         Product banan = new Product("Бананы",70,5);
         Product apple = new Product("Яблоки", 90, 3);
         Product cucumber = new Product("Огрурцы", 209, 2);
@@ -11,6 +27,7 @@ public class Main {
         Recipe fruitSalad = new Recipe("Фруктовый салат", Collections.singleton("яблоки и бананы"), 200);
         Recipe vegetableSalad = new Recipe("Овощной салат", Collections.singleton("томаты и огурцы"), 250);
         Recipe vegetableSalad1 = new Recipe("Овощной салат", Collections.singleton("томаты и огурцы"), 250);
+
 
 
 //        Set<Recipe> recipes = new HashSet<>();
@@ -54,4 +71,6 @@ public class Main {
             Main.recipes.add(recipe);
         }
     }
-   }
+
+   // private static class iterator implements Iterator<Integer> {
+    }
