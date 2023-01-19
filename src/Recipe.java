@@ -4,7 +4,7 @@ public class  Recipe {
 
 
     public final String nameRecipe;                          //название рецепта
-    public final Set <String> structure;                    //состав, множество продуктов
+    public final Set<String> structure;                    //состав, множество продуктов
 
     public final int cost;                                  //общая стоимость продуктов используемых в рецепте
 
