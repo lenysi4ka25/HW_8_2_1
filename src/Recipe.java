@@ -36,12 +36,12 @@ public class  Recipe {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Recipe recipe = (Recipe) o;
-        return /*cost == recipe.cost &&*/ Objects.equals(nameRecipe, recipe.nameRecipe)/* && Objects.equals(structure, recipe.structure)*/;
+        return /*cost == recipe.cost &&*/ Objects.equals(nameRecipe, recipe.nameRecipe) && Objects.equals(structure, recipe.structure);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(/*super.hashCode(), */nameRecipe/*, structure, cost*/);
+        return Objects.hash(/*super.hashCode(), */nameRecipe, structure /*, cost*/);
     }
 
     @Override
