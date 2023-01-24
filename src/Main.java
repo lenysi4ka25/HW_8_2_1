@@ -7,7 +7,7 @@ public class Main {
             List<Integer> numbers = new ArrayList<>(20);
             Random random = new Random();
             while (numbers.size() < 20) {
-                numbers.add(random.nextInt(30));
+                numbers.add(random.nextInt(4));
             }
             System.out.println(numbers);
             Iterator<Integer> numberIterator = numbers.iterator();
@@ -24,22 +24,18 @@ public class Main {
         Product apple = new Product("Яблоки", 90, 3);
         Product cucumber = new Product("Огрурцы", 209, 2);
         Product tomat = new Product("Томаты", 370, 1);
-        Recipe fruitSalad = new Recipe("Фруктовый салат", Collections.singleton("яблоки и бананы"), 200);
-        Recipe vegetableSalad = new Recipe("Овощной салат", Collections.singleton("томаты и огурцы"), 250);
-        Recipe vegetableSalad1 = new Recipe("Овощной салат", Collections.singleton("томаты и огурцы"), 250);
-
-
-
-//        Set<Recipe> recipes = new HashSet<>();
-//        recipes.add(fruitSalad);
-//        recipes.add(vegetableSalad);
+       // Recipe fruitSalad = new Recipe("Фруктовый салат", recipes.add(banan, apple, ), 200);
+        Recipe fruitSalad1 = new Recipe("Фруктовый салат", Collections.singleton(apple), 200);
+        Recipe vegetableSalad = new Recipe("Овощной салат", Collections.singleton(tomat), 250);
+        Recipe vegetableSalad1 = new Recipe("Овощной салат", Collections.singleton(cucumber), 250);
 
 
             addProduct(product, apple);
             addProduct(product, banan);
             addProduct(product, tomat);
             addProduct(product, cucumber);
-            addRecipe(recipes, fruitSalad);
+         //   addRecipe(recipes, fruitSalad);
+            addRecipe(recipes, fruitSalad1);
             addRecipe(recipes, vegetableSalad);
             addRecipe(recipes, vegetableSalad1);
 
@@ -71,6 +67,4 @@ public class Main {
             Main.recipes.add(recipe);
         }
     }
-
-   // private static class iterator implements Iterator<Integer> {
     }

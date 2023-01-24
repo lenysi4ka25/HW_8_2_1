@@ -4,12 +4,12 @@ public class  Recipe {
 
 
     public final String nameRecipe;                          //название рецепта
-    public final Set<String> structure;                    //состав, множество продуктов
+    public final Set<Product> structure;                    //состав, множество продуктов
 
     public final int cost;                                  //общая стоимость продуктов используемых в рецепте
 
 
-    public Recipe(String nameRecipe, Set<String> structure, int cost) {
+    public Recipe(String nameRecipe, Set<Product> structure, int cost) {
         if (nameRecipe == null || structure.size() == 0) {
             throw new IllegalArgumentException("Заполните все поля!");
         }
@@ -22,7 +22,7 @@ public class  Recipe {
         return nameRecipe;
     }
 
-    public Set<String> getStructure() {
+    public Set<Product> getStructure() {
         return structure;
     }
 
@@ -36,12 +36,12 @@ public class  Recipe {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Recipe recipe = (Recipe) o;
-        return /*cost == recipe.cost &&*/ Objects.equals(nameRecipe, recipe.nameRecipe) && Objects.equals(structure, recipe.structure);
+        return  Objects.equals(nameRecipe, recipe.nameRecipe);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(/*super.hashCode(), */nameRecipe, structure /*, cost*/);
+        return Objects.hash(nameRecipe);
     }
 
     @Override
@@ -51,6 +51,6 @@ public class  Recipe {
                  nameRecipe +
                 ", состав: " + structure +
                 ", стоимость: " + cost +
-                " руб."/* + super.toString()*/;
+                " руб.";
     }
 }

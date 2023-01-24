@@ -1,14 +1,11 @@
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Product {
 
-    /*static ArrayList<Product> product = new ArrayList<>();*/
+    private  String productName;
 
-    private final String productName;
-
-    private final int price;
-    private final int amount;
+    private  int price;
+    private int amount;
 
     private boolean checked;
 
@@ -26,6 +23,10 @@ public class Product {
         }
         this.checked = false;
     }
+
+    public Product(String productName) {
+    }
+
 
     public void setChecked() {
         this.checked = true;
@@ -61,20 +62,6 @@ public class Product {
     public int hashCode() {
         return Objects.hash(productName);
     }
-
-    /*
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return price == product.price && amount == product.amount && Objects.equals(productName, product.productName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(productName, price, amount);
-    }*/
 
     @Override
     public String toString() {
