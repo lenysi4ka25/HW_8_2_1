@@ -3,13 +3,11 @@ import java.util.*;
 public class  Recipe {
 
 
-    public final String nameRecipe;                          //название рецепта
-    public final Set<Product> structure;                    //состав, множество продуктов
+    public String nameRecipe;                          //название рецепта
+    private Set<Product> structure;                    //состав, множество продуктов
+    public int cost;                                  //общая стоимость продуктов используемых в рецепте
 
-    public final int cost;                                  //общая стоимость продуктов используемых в рецепте
-
-
-    public Recipe(String nameRecipe, Set<Product> structure, int cost) {
+        public Recipe(String nameRecipe, Set<Product> structure, int cost) {
         if (nameRecipe == null || structure.size() == 0) {
             throw new IllegalArgumentException("Заполните все поля!");
         }
@@ -25,6 +23,10 @@ public class  Recipe {
     public Set<Product> getStructure() {
         return structure;
     }
+
+//    private void setStructure(Set<Product> structure) {
+  //      this.structure = structure;
+   // }
 
     public int getCost() {
         return cost;
@@ -43,6 +45,13 @@ public class  Recipe {
     public int hashCode() {
         return Objects.hash(nameRecipe);
     }
+
+//    private Set<Product> pattern(Product... products) {
+//       HashSet <Product> set = (HashSet<Product>) this.getStructure();
+//       set.addAll(Arrays.asList(products));
+//       setStructure(set);
+//                return structure;
+//    }
 
     @Override
     public String toString() {
