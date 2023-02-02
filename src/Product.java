@@ -24,8 +24,8 @@ public class Product {
         this.checked = false;
     }
 
-    public Product(String productName) {
-    }
+//    public Product(String productName) {
+//    }
 
 
     public void setChecked() {

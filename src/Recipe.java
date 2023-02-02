@@ -3,7 +3,7 @@ import java.util.*;
 public class  Recipe {
 
 
-    public String nameRecipe;                          //название рецепта
+    private String nameRecipe;                          //название рецепта
     private Set<Product> structure;                    //состав, множество продуктов
     public int cost;                                  //общая стоимость продуктов используемых в рецепте
 
