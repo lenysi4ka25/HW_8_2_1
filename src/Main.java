@@ -5,7 +5,7 @@ public class Main {
     static Set<Product> productVegetable = new HashSet<>();
 
     static Set<Product> product = new HashSet<>();
-    static Set<Recipe> recipeSet = new HashSet<>();
+    static Map<Product, Integer> recipeSet = new HashMap();
         public static void main(String[] args) {
 
             List<Integer> numbers = new ArrayList<>(20);
@@ -41,17 +41,23 @@ public class Main {
             addProduct(productFruits, banan);
             addProduct(productVegetable, tomat);
             addProduct(productVegetable, cucumber);
-            addRecipe(recipeSet, fruitSalad);
-            addRecipe(recipeSet, vegetableSalad);
+//            addRecipe(recipeSet, fruitSalad);
+//            addRecipe(recipeSet, vegetableSalad);
+            recipeSet.put(banan, 2);
+            recipeSet.put(apple, 0);
+            addCountProduct(recipeSet.put(banan, 0));
 
 
             for (Product product : product) {
                 System.out.println(product);
             }
 
-            for (Recipe recipe : recipeSet) {
-                System.out.println(recipe);
+            for (Map.Entry<Product, Integer> productIntegerEntry : recipeSet.entrySet()) {
+                System.out.println(productIntegerEntry);
             }
+//            //for (Recipe recipe : recipeSet) {
+//                System.out.println(recipe);
+//            }
     }
 
     public static void addProduct (Set<Product> products, Product product){
@@ -63,6 +69,12 @@ public class Main {
     public static void addRecipe(Set<Recipe> recipes, Recipe recipe) {
         if (!recipes.add(recipe)) {
             throw new IllegalArgumentException("Рецепт уже есть!");
+        }
+    }
+
+    public static void addCountProduct(Integer productMap) {
+        if (!productMap.intValue()) {
+            throw new IllegalArgumentException("1");
         }
     }
 

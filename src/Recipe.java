@@ -24,9 +24,6 @@ public class  Recipe {
         return structure;
     }
 
-//    private void setStructure(Set<Product> structure) {
-  //      this.structure = structure;
-   // }
 
     public int getCost() {
         return cost;
@@ -46,12 +43,6 @@ public class  Recipe {
         return Objects.hash(nameRecipe);
     }
 
-//    private Set<Product> pattern(Product... products) {
-//       HashSet <Product> set = (HashSet<Product>) this.getStructure();
-//       set.addAll(Arrays.asList(products));
-//       setStructure(set);
-//                return structure;
-//    }
 
     @Override
     public String toString() {
